@@ -1,14 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import { Navbar } from './Navbar_PT/Navbar';
+import { Admin } from './component-vh/Admin';
 import { Home } from './HomePage_PT/Home';
+import { Navbar } from './Navbar_PT/Navbar';
+
+
 
 function App() {
   return (
     <div className="App">
-   <Navbar/>
-   <Home />
-  
+      <Navbar />
+      <Home />
+     <Admin/>
 
     </div>
   );
