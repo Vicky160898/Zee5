@@ -1,0 +1,62 @@
+.footerBottomSection{
+    align-items: left;
+flex:wrap;
+    gap: 4rem;
+    color:silver;
+    
+}
+.LineThin{
+    border: .1mm solid gainsboro;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+.Popular-Tv-Shows {
+    
+    font-size: small;
+    text-align: left;
+}
+
+
+.Popular-LIVE-TV-Channels {
+    
+    font-size: small;
+    text-align: left;
+}
+
+.Preminum-Movies {
+    
+    font-size: small;
+    text-align: left;
+}
+
+.Popular-Web-Series {
+    
+    font-size: small;
+    text-align: left;
+}
+
+.Bollywood-Top-Celebrites {
+    
+    font-size: small;
+    text-align: left;
+}
+
+.Games-News {
+    
+    font-size: small;
+    text-align: left;
+}
+
+.Popular-Tv-Shows {
+    
+    font-size: small;
+    text-align: left;
+}
+
+@media only screen and (max-width: 479px) {
+.Popular-LIVE-TV-Channels{
+    display: none;
+}
+
+}
