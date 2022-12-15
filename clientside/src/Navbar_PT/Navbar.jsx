@@ -16,7 +16,6 @@ import {
   InputLeftElement,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
-import DrawerE from "./NavbarCom";
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const base = {
@@ -29,9 +28,9 @@ export const Navbar = () => {
     alignItems: "center",
   };
   return (
-    <Box p="0.2px" zIndex="5" position={"fixed"} w="100%">
+    <Box p="0.2px" zIndex="3" position="fixed" w="100%" top="-1">
       <Flex
-        display={["none", "flex"]}
+        // display={[ "none","flex"]}
         alignItems="center"
         gap="20px"
         bgColor="#0f0617"
@@ -114,7 +113,10 @@ export const Navbar = () => {
         </Flex>
 
         <Spacer />
-        <InputGroup w={{md:"250px",lg:"360px"}} color="white" >
+        <InputGroup
+        //  w={{sm:"400px",md:"250px",lg:"360px"}} 
+        w={["200px","250px","360px"]}
+         color="white" >
           <InputLeftElement
             pointerEvents="none"
             color="white"
@@ -125,28 +127,27 @@ export const Navbar = () => {
           <Input focusBorderRadius="0.5px" placeholder="Enter amount" />
         </InputGroup>
 
-        <Box color="white" borderRadius="50%">
+        <Box color="white" borderRadius="50%" mr={["-20px"]}>
           <i class="fa-solid fa-user"></i>
         </Box>
-        <Box color="white">
+        <Box color="white"  display={["none"]}>
           <ion-icon name="language-outline"></ion-icon>
         </Box>
         <Box
           color="white"
           w={{md:"120px",lg:"130px"}}
-          // display={{sm:"none"}}
           h="30px"
           borderRadius="5px"
           backgroundColor="#8230c6"
           margin="20px"
           pt="2px"
           alignContent="center"
-
+          display={["none"]}
         >
           PREMIMUM
         </Box>
         <Box color="white">
-          <Menu bgColor="#0f0617 " border="none">
+          <Menu bgColor="#0f0617 " border="none"  >
             <MenuButton
               as={IconButton}
               bgColor="#0f0617"
@@ -198,40 +199,6 @@ export const Navbar = () => {
             </MenuList>
           </Menu>
         </Box>
-      </Flex>
-      <Flex
-        bgColor={"#0f0617"}
-        h="50px"
-        px="10px"
-        alignItems={"center"}
-        justifyContent="space-between"
-        display={["flex", "none"]}
-        position={"fixed"}
-        w="100%"
-      >
-        <Flex alignItems="center">
-          <Image
-            h="40px"
-            src="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.52.65"
-            alt=""
-          />
-          <Box
-            color="white"
-            w="fit-content"
-            borderRadius="5px"
-            backgroundColor="#8230c6"
-            px="20px"
-            py="5px"
-            ml="20px"
-            alignContent="center"
-          >
-            Buy Plan
-          </Box>
-        </Flex>
-        {/* <Flex alignItems="center"> 
-         
-          <DrawerE />
-       </Flex>  */}
       </Flex>
     </Box>
   );

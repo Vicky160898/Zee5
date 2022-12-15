@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Slider from "react-slick";
 import { Box, Image } from "@chakra-ui/react";
 import "slick-carousel/slick/slick.css";
@@ -9,8 +9,8 @@ export const Home = () => {
     infinite: true,
     speed: 1000,
     slidesToShow: 1.2,
-    gap:20,
-    arrow:true,
+    gap: 20,
+    arrow: true,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -30,8 +30,8 @@ export const Home = () => {
     },
   ];
   return (
-  <Box>
     <Box>
+      {/* <Box>
         <Slider {...carouselcall} style={{ overflow: "hidden" }}>
             {list.map((el)=>(
               <Box>
@@ -39,7 +39,8 @@ export const Home = () => {
               </Box>
             ))}
           </Slider>
-        </Box>
-  </Box>
-  )
-}
+        </Box> */}
+     
+    </Box>
+  );
+};
