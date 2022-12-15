@@ -1,134 +1,140 @@
 import React from 'react'
-import { Box,Text } from '@chakra-ui/react'
+import { Box, UnorderedList, ListItem, Button ,ListIcon, Text, Spacer} from '@chakra-ui/react'
+
 function Party() {
   return (
     <>
-    <Box bg='black' w='40%' p={4} color='white'
-    height='50px'
+    <Box  bg= '#0f0617'  height='1000px'>
+    <Box bg= '#0f0617' w='40%' p={8} color='white'
+    height='150px'
 
     fontSize='42px'
     fontWeight='bold'
     marginTop='100px'
     marginBottoom='100px'
+    borderRadius='30px'
     marginLeft='600px'>
       
      
   Choose your premium plan
   </Box>
-<Box
-
- height='620px'
- w='60%'
- margin='auto'
- bg='black'>
-<Box bg='gray' w='70%' p={4} color='white'
-height='70px'
-margin='auto'
-fontSize='17px'
-fontWeight='bold'
-borderRadius='33px'
-lineHeight='0px'
->
-  <Text  
-  textAlign='left'>Premium content</Text>
-  <Text   textAlign='left'>Movies, Web Series, TV Shows, Live TV, Downloads</Text>
 
 
 
-</Box>
-<Box bg='gray' w='70%' p={4} color='white'
-height='70px'
-borderRadius='33px'
-margin='auto'
-fontSize='17px'
-fontWeight='bold'
-marginTop='5px'
-lineHeight='0px'
->
-  <Text  
-  textAlign='left'>Ad-free</Text>
-
-</Box>
-<Box bg='gray' w='70%' p={4} color='white'
-height='70px'
-margin='auto'
-borderRadius='33px'
-fontSize='17px'
-fontWeight='bold'
-marginTop='5px'
-lineHeight='0px'
->
-  <Text  
-  textAlign='left'>Device
- </Text>
-  <Text   textAlign='left'> Mobile, TV and Laptop</Text>
-</Box>
-<Box bg='gray' w='70%' p={4} color='white'
-height='70px'
-margin='auto'
-fontSize='17px'
-fontWeight='bold'
-marginTop='5px'
-borderRadius='33px'
-lineHeight='0px'
->
-  <Text  
-  textAlign='left'>No. of screens</Text>
-
-</Box>
-
-<Box bg='gray' w='70%' p={4} color='white'
-height='70px'
-margin='auto'
-fontSize='17px'
-fontWeight='bold'
-marginTop='5px'
-borderRadius='33px'
-lineHeight='0px'
->
-  <Text  
-  textAlign='left'>No. of screens</Text>
+<Box display='flex' gap='140px'   margin='auto'  justifyContent='centre' marginLeft='100px' marginTop='40px'  marginRight='100px'>
+<Box background= '#2c2136'  w='25%' p={4} color='white'   borderRadius='30px'
+ fontWeight='bold' fontSize='27px' lineHeight='50px' padding='10px'>
   
-</Box>
-
-<Box bg='gray' w='70%' p={4} color='white'
-height='70px'
-margin='auto'
-fontSize='17px'
-borderRadius='33px'
-fontWeight='bold'
-marginTop='5px'
-lineHeight='0px'
->
-  <Text  
-  textAlign='left'>Max audio quality</Text>
+<br/>
+<UnorderedList  textAlign='left'  marginLeft='70px'>
+<ListItem>Add Free</ListItem>
+ 
   
+ <ListItem>No. of screens</ListItem>
+ <ListItem>Max audio quality</ListItem>
+
+</UnorderedList>
+<br/>
+<Box lineHeight='40px'border=' 1px solid white' borderRadius='30px'   fontSize='22px' w='70%' height='160px' p={4} color='white' margin='auto'>
+ <Text>
+Premium HD</Text>
+ <Text>
+₹1499</Text>
+ <Text>12 Months</Text>
 </Box>
-<Box bg='gray' w='70%' p={4} color='white'
-height='70px'
-margin='auto'
-fontSize='17px'
-borderRadius='33px'
-fontWeight='bold'
-marginTop='5px'
-lineHeight='0px'
->
-  <Text  
-  textAlign='left'>Max video quality</Text>
+
+<Button background=' #8230c6'  w='%' p={8} color='white'
+    height='100px'
+
+    fontSize='32px'
+    fontWeight='bold'
+    marginTop='30px'
+    marginBottoom='100px'
+    borderRadius='60px'
+    marginLeft='10px'>
+      
+     
+  Buy Premium
+  </Button>
+</Box>
+<br/>
+<Box background= '#2c2136'  w='25%' p={4} color='white'   borderRadius='30px'
+ fontWeight='bold' fontSize='27px' lineHeight='50px' padding='10px'>
   
+<br/>
+<UnorderedList  textAlign='left'  marginLeft='70px'>
+<ListItem>Add Free</ListItem>
+ 
+  
+ <ListItem>No. of screens</ListItem>
+ <ListItem>Max audio quality</ListItem>
+
+</UnorderedList>
+<br/>
+<Box lineHeight='40px'border=' 1px solid white' borderRadius='30px'   fontSize='22px' w='70%' height='160px' p={4} color='white' margin='auto'>
+ <Text>
+Premium HD</Text>
+ <Text>
+₹1499</Text>
+ <Text>12 Months</Text>
 </Box>
-<Box>
+
+<Button background=' #8230c6'  w='%' p={8} color='white'
+    height='100px'
+
+    fontSize='32px'
+    fontWeight='bold'
+    marginTop='30px'
+    marginBottoom='100px'
+    borderRadius='60px'
+    marginLeft='10px'>
+      
+     
+  Buy Premium
+  </Button>
+</Box>
+
+<Box background= '#2c2136'  w='25%' p={4} color='white'   borderRadius='30px'
+ fontWeight='bold' fontSize='27px' lineHeight='50px' padding='10px'>
+  
+<br/>
+<UnorderedList  textAlign='left'  marginLeft='70px'>
+<ListItem>Add Free</ListItem>
+ 
+  
+ <ListItem>No. of screens</ListItem>
+ <ListItem>Max audio quality</ListItem>
+
+</UnorderedList>
+<br/>
+<Box lineHeight='40px'border=' 1px solid white' borderRadius='30px'   fontSize='22px' w='70%' height='160px' p={4} color='white' margin='auto'>
+ <Text>
+Premium HD</Text>
+ <Text>
+₹1499</Text>
+ <Text>12 Months</Text>
+</Box>
+
+<Button background=' #8230c6'  w='%' p={8} color='white'
+    height='100px'
+
+    fontSize='32px'
+    fontWeight='bold'
+    marginTop='30px'
+    marginBottoom='100px'
+    borderRadius='60px'
+    marginLeft='10px'>
+      
+     
+  Buy Premium
+  </Button>
+</Box>
 </Box>
 
 
-<Box   bg='tomato' w='12%' height='150px' color='white' borderRadius='10px' mt='70px' textAlign='centre'>
 
-<Text   mt='40px'>Premium HD</Text>
-  <Text>399</Text>
-  <Text lineHeight='0px'>3 months</Text>
-</Box>
 
-</Box>
+  </Box>
 </>
   )
 }
