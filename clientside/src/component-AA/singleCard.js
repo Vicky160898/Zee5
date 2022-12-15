@@ -9,7 +9,8 @@ function SingleCard({  index, prem=false }) {
 
   return (
     <GridItem
-      w={240}
+      // w={240}
+      w={[0,240,240]}
       justifyContent={"space-between"}
       key={index}
       cursor={"pointer"}
