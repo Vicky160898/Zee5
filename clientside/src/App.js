@@ -10,12 +10,6 @@ function App() {
     <div className="App">
       <Navbar />
       <Home />
-<<<<<<< HEAD
-   
-=======
-    
->>>>>>> b130341cdcbeec0581162608cd08b81dae3a6576
-
     </div>
   );
 }
