@@ -9,15 +9,15 @@ import React, { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import axios from "axios";
-import SingleCard from "../../component-AA/singleCard";
+import SingleCard from "../../component/singleCard";
 
 
 
 const api_key = `AIzaSyABod8lOndkalv1saeCleLFmeS1gaOZPSU`;
-let api_link = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=RRR&key=`;
 
 const VideoPlay = () => {
     const [myVideoId,setVideoId] = useState("hcMzwMrr1tE")
+    const [recommended,setRecommended]=useState([])
     const [toggle, setToggle] = useState(true)
     const { isOpen, onToggle } = useDisclosure();
     const {title} = useParams("pushpa")
@@ -26,6 +26,14 @@ const VideoPlay = () => {
         onToggle();
         setToggle(!toggle)
     }
+
+    const fetchData = async () => {
+        const request = await axios.get(`https://api.themoviedb.org/3/trending/all/week?api_key=57aae2206da7dc6e06f17197a51211ba&language=en-US&_limit=8`);
+        setRecommended(request.data.results);
+       
+        return request;
+      };
+
     useEffect(()=>{
             axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${title}&key=${api_key}`).then(res=>{
                 res=res.data?.items[0]?.id?.videoId
@@ -33,6 +41,10 @@ const VideoPlay = () => {
             }).catch(err=>{
                 console.log(err)
             })
+
+
+fetchData()
+
         
     },[])
     return (
@@ -43,6 +55,7 @@ const VideoPlay = () => {
                         <iframe id="video-player"  width="100%" padding="10px" height="425" src={`https://www.youtube.com/embed/${myVideoId}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </Box>
                     <Box p={{ base: "1rem", md: "1.5rem", lg: "2rem" }}>
+                    <Text fontSize="24px" fontWeight="bold"  >Pushpa</Text>
                         <Text textAlign="left" m="16px 0 8px 0" fontSize="14px" fontWeight="bold" color="white" >{title}</Text>
                         <Text textAlign="left" fontSize="19px" fontWeight="bold" color="#A785FF" >Movies/Shows/News</Text>
                         <Flex gap="1rem" flexDirection={"column"}>
@@ -131,26 +144,21 @@ const VideoPlay = () => {
                         </Box>
                     </Box>
                 </Box>
-                {/* <Box w="32vw" justifyContent="center" display={['none','flex','flex']} className="video-second-box" >
-                    <SingleCard/>
-                </Box> */}
-                <Box  display={{sm:"none",md:"none",lg:"block"}}>
+             
+                <Box backgroundColor="black" color={"white"} display={{sm:"none",md:"none",lg:"block"}}>
+                <Box fontSize={[0,22]} style={{fontWeight:"bold",marginTop:"22px",marginLeft:"19px"}} display={{sm:"none",md:"none",lg:"block"}}>Recommended Movies For You</Box>
                 <Grid backgroundColor="black" padding="5"  templateRows='repeat' templateColumns='repeat(2, 1fr)' w={[0,550,550]}  gap={2}>
-                <SingleCard/>
-                <SingleCard/>
-                <SingleCard/>
-                <SingleCard/>
-                <SingleCard/>
-                <SingleCard/>
-                <SingleCard/>
+                    
+               {recommended?.map((el)=>(
+                <SingleCard key={el.id} data={el}  />
+               ))}
+                
+                
                 
                 </Grid>
                 </Box>
             </Flex>
 
-      {/* <Top10Shows />
-      <TopRatingShow />
-      <LatestEpiTvShow /> */}
     </>
   );
 };

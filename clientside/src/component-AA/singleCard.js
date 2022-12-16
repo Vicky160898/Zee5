@@ -4,15 +4,17 @@ import {  FaPlay } from "react-icons/fa";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-function SingleCard({  index, prem=false }) {
+function SingleCard(props) {
+  console.log(props)
   const [state, setState] = useState(false);
 
   return (
+    
     <GridItem
       // w={240}
       w={[0,240,240]}
       justifyContent={"space-between"}
-      key={index}
+      
       cursor={"pointer"}
       position={"relative"}
       borderRadius={"lg"}
@@ -22,7 +24,7 @@ function SingleCard({  index, prem=false }) {
     >
       <Link to={`/video/play/Ninaithake Inikum`}>
         <Box className="mx-5 hover:scale-105 hover:z-20">
-          <Image src="https://akamaividz2.zee5.com/image/upload/w_224,h_336,c_scale,f_webp,q_auto:eco/resources/0-0-1z5259649/portrait/1920x77098956c98fc1c4bd6a83260bcf11b5357.jpg" alt="title" borderRadius="lg" h='300px' w="100%" />
+          <Image src={`https://image.tmdb.org/t/p/original/${props.data.poster_path}`} alt="title" borderRadius="lg" h='300px' w="100%" />
           
          
         </Box>
