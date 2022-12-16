@@ -2,8 +2,8 @@ import { Box, Flex, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 import {AiFillFacebook,AiFillInstagram,AiOutlineTwitter,AiFillYoutube} from "react-icons/ai"
 import "./FooterV.css"
 function Footer(){
-return (<Box  paddingLeft={"30px"}>
-    <Box marginBottom={"80px"} marginTop={"60px"}>
+return (<Box  paddingLeft={"30px"} background="#0F0617" color="white">
+    <Box >
     <Flex className="footerBottomSection" >
         <Box   >
         <Stack textAlign={"left"} className="Popular-Tv-Shows">
@@ -87,8 +87,8 @@ return (<Box  paddingLeft={"30px"}>
 <Box >
     <Flex  gap={"1rem"}>
     <Box>Dwonload apps</Box>
-    <Box><img src="play_store.png" alt ="google"/></Box>
-    <Box><img src="app_store.png" alt ="google"/></Box>
+    <Box><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt ="google"/></Box>
+    <Box><img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt ="google"/></Box>
     </Flex>
 </Box>
 <Box>

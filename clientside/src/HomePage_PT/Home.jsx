@@ -31,7 +31,7 @@ export const Home = () => {
   ];
   return (
     <Box>
-      {/* <Box>
+      <Box>
         <Slider {...carouselcall} style={{ overflow: "hidden" }}>
             {list.map((el)=>(
               <Box>
@@ -39,7 +39,7 @@ export const Home = () => {
               </Box>
             ))}
           </Slider>
-        </Box> */}
+        </Box>
      
     </Box>
   );

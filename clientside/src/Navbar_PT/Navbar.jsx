@@ -1,4 +1,5 @@
 import React from "react";
+import "./Navbar.css"
 import { NavLink } from "react-router-dom";
 import {
   Flex,
@@ -130,9 +131,17 @@ export const Navbar = () => {
         <Box color="white" borderRadius="50%" mr={["-20px"]}>
           <i class="fa-solid fa-user"></i>
         </Box>
-        <Box color="white"  display={["none"]}>
-          <ion-icon name="language-outline"></ion-icon>
+        <Box color="white"  display={[""]}>
+          <ion-icon name="language-outline">
+          <div id="google_translate_element"></div>
+            
+          </ion-icon>
+          
+
+          
         </Box>
+
+        
         <Box
           color="white"
           w={{md:"120px",lg:"130px"}}

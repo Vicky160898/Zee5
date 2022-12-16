@@ -33,7 +33,7 @@ const handleSubmit=(e)=>{
 
 }
 return(
-    <Box  >
+    <Box background="#0F0617" color="white">
         <Stack>
         <Box className="LoginMainBox" >
             <Box className="LoginInnerBox">
