@@ -2,10 +2,10 @@ const { model, Schema } = require("mongoose");
 
 const UserSchema = new Schema(
   {
+    img: { type: String, required: true },
     url: { type: String, required: true },
     title: { type: String, required: true },
-    premium: { type: Boolean, default: false },
-    category: { type: String , required:true },
+    category: { type: String, required: true },
   },
   {
     versionKey: false,
@@ -13,6 +13,6 @@ const UserSchema = new Schema(
   }
 );
 
-const TelevisionSchema = new model("zee" , UserSchema);
+const TelevisionSchema = new model("zee", UserSchema);
 
 module.exports = TelevisionSchema;
