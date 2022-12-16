@@ -41,7 +41,11 @@ export const Navbar = () => {
           src="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.52.65"
           alt=""
         />
-        <Box color="white" gap="20px" display={{ base: "none", md: "none" ,lg:"flex"}}>
+        <Box
+          color="white"
+          gap="20px"
+          display={{ base: "none", md: "none", lg: "flex" }}
+        >
           <NavLink to="#" style={({ isActive }) => (isActive ? active : base)}>
             Home
           </NavLink>
@@ -72,6 +76,7 @@ export const Navbar = () => {
               w="200px"
               color="white"
               borderColor="#0f0617"
+              display={{ sm: "none" }}
               ml="-80px"
               mt="15px"
               boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
@@ -113,41 +118,36 @@ export const Navbar = () => {
         </Flex>
 
         <Spacer />
-        <InputGroup
-        //  w={{sm:"400px",md:"250px",lg:"360px"}} 
-        w={["200px","250px","360px"]}
-         color="white" >
+        <InputGroup w={["200px", "250px", "250px"]} color="white">
           <InputLeftElement
             pointerEvents="none"
             color="white"
             fontSize="1.2em"
             children={<Search2Icon color="gray.300" />}
-           
           />
-          <Input focusBorderRadius="0.5px" placeholder="Enter amount" />
+          <Input focusBorderRadius="0.5px" placeholder="Search From here" />
         </InputGroup>
 
-        <Box color="white" borderRadius="50%" mr={["-20px"]}>
+        <Box color="white" borderRadius="50%">
           <i class="fa-solid fa-user"></i>
         </Box>
-        <Box color="white"  display={["none"]}>
+        <Box color="white">
           <ion-icon name="language-outline"></ion-icon>
         </Box>
         <Box
           color="white"
-          w={{md:"120px",lg:"130px"}}
+          w={{ sm: "none", md: "120px", lg: "130px" }}
           h="30px"
           borderRadius="5px"
           backgroundColor="#8230c6"
           margin="20px"
           pt="2px"
           alignContent="center"
-          display={["none"]}
         >
           PREMIMUM
         </Box>
         <Box color="white">
-          <Menu bgColor="#0f0617 " border="none"  >
+          <Menu bgColor="#0f0617 " border="none">
             <MenuButton
               as={IconButton}
               bgColor="#0f0617"
