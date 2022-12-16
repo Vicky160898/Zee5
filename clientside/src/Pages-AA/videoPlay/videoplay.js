@@ -9,7 +9,7 @@ import React, { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import axios from "axios";
-import SingleCard from "../../component/singleCard";
+import SingleCard from "../../component-AA/singleCard";
 
 
 
