@@ -9,11 +9,13 @@ import { Navbar } from './Navbar_PT/Navbar';
 function App() {
   return (
     <div className="App">
-      <Navbar />
+
+      {/* <Navbar /> */}
       {/* <Home /> */}
-      <Data/>
-      {/* <Delete/> */}
-    </div>
+      <Footer/>
+        </div>
+
+
   );
 }
 
