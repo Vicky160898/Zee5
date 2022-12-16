@@ -11,14 +11,39 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import { CheckIcon } from '@chakra-ui/icons';
+import axios from 'axios';
+const user = {
+  title:"",
+}
 
 export const Delete = () => {
-  const [email, setEmail] = useState('');
-//   const [state, setState] = useState<'initial' | 'submitting' | 'success'>(
-//     'initial'
-//   );
+  const [dot, setDot] = useState(user);
+  const [state, setState] = useState('initial' | 'submitting' | 'success' 
+   );
   const [error, setError] = useState(false);
 
+ const handleClick = (e) => {
+   const {name , value } = e.target;
+   setDot({...dot, [name]:value})
+ }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+   await axios.delete("http://localhost:8080/admin/delete", dot);
+    setError(false);
+    setState('submitting');
+
+    //remove this code and implement your submit logic right here
+    setTimeout(() => {
+      if (dot !== "") {
+        setError(false);
+        setState('success');
+        return;
+      }
+      setState('initial');
+     
+    }, 1000);
+  }
   return (
     <Flex
       minH={'100vh'}
@@ -38,60 +63,25 @@ export const Delete = () => {
           textAlign={'center'}
           color={"white"}
           mb={5}>
-          Subscribe to our Newsletter
+         Remove data 
         </Heading>
         <Stack
           direction={{ base: 'column', md: 'row' }}
           as={'form'}
           spacing={'12px'}
-          onSubmit={(e) => {
-            e.preventDefault();
-            setError(false);
-            //setState('submitting');
-
-            // remove this code and implement your submit logic right here
-        //     setTimeout(() => {
-        //       if (email === 'fail@example.com') {
-        //         setError(true);
-        //         setState('initial');
-        //         return;
-        //       }
-
-        //       setState('success');
-        //     }, 1000);
-           }}>
+          onSubmit={handleSubmit}>
         
           <FormControl>
-            <Input
-              variant={'solid'}
-              borderWidth={1}
-              color={'gray.800'}
-              _placeholder={{
-                color: 'gray.400',
-              }}
-              bg={useColorModeValue('#2C2136')}
-              id={'email'}
-              type={'email'}
-              required
-              placeholder={'Your Email'}
-              aria-label={'Your Email'}
-              value={email}
-              //disabled={state !== 'initial'}
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
-            />
+            <Input  color="white" type="text" name="title" placeholder="Enter title" value={dot.title} onChange={handleClick} />
           </FormControl>
           <FormControl w={{ base: '100%', md: '40%' }}>
             <Button
-             bg={useColorModeValue('#8230C6')}
-              //colorScheme={state === 'success' ? 'green' : 'blue'}
-              //isLoading={state === 'submitting'}
+              colorScheme={state === 'success' ? 'green' : 'purple'}
+              isLoading={state === 'submitting'}
               w="100%"
-            //   type={state === 'success' ? 'button' : 'submit'}
+              type={state === 'success' ? 'button' : 'Delete'}
               >
-              {/* {state === 'success' ? <CheckIcon /> : 'Submit'} */}
-              Delete
+              {state === 'success' ? <CheckIcon /> : 'Delete'}
             </Button>
           </FormControl>
         </Stack>
