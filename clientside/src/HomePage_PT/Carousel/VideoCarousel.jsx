@@ -8,37 +8,37 @@ export const VideoCarousel = () => {
   const videoSetting = [
     {
       id: 1,
-      title: "video1",
+      title: "Kumkum Bhagya",
       src: "https://www.youtube.com/watch?v=joZRFygCD5w",
-      credit: "Video by Zee",
+      credit: "Zee TV",
     },
     {
       id: 2,
-      title: "video2",
+      title: "Kundali Bhagya",
       src: "https://www.youtube.com/watch?v=LP26qiLkZ_Y",
-      credit: "Video by Zee",
+      credit: "Zee TV",
     },
     {
       id: 3,
-      title: "video3",
+      title: "Radha Mohan",
       src: "https://www.youtube.com/watch?v=emP7ArfCcF8",
-      credit: "Video by Zee",
+      credit: "Zee TV",
     },
     {
       id: 4,
-      title: "video4",
+      title: "Kundali Bhagya",
       src: "https://www.youtube.com/watch?v=QAvzUoOJmK0",
-      credit: "Video by Zee",
+      credit: "Zee TV",
     },
     {
       id: 5,
-      title: "video5",
+      title: "Bhagya Lakshmi",
       src: "https://www.youtube.com/watch?v=jl0SRPOqlHA",
-      credit: "Video by Zee",
+      credit: "Zee TV",
     },
   ];
   return (
-    <Box mt="5.7%"  marginTop={{sm:"20%",md:"8%",lg:"5%"}}>
+    <Box  marginTop={{base:"18%",md:"9%",lg:"6%"}}>
       <Carousel>
         {videoSetting.map((item) => (
           <Carousel.Item key={item.id}>

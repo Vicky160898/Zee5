@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../images/logo.png";
 import {
   Flex,
   Spacer,
@@ -35,18 +36,24 @@ export const Navbar = () => {
         gap="20px"
         bgColor="#0f0617"
       >
-        <Image
-          h="80px"
-          w="80px"
-          src="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.52.65"
+       <NavLink to="/">
+       <Image
+          ml="10px"
+          h="70px"
+          w="70px"
+          mt="10px"
+          mb="10px"
+          borderRadius="20px"
+          src={logo}
           alt=""
         />
+       </NavLink>
         <Box
           color="white"
           gap="20px"
           display={{ base: "none", md: "none", lg: "flex" }}
         >
-          <NavLink to="#" style={({ isActive }) => (isActive ? active : base)}>
+          <NavLink to="/" style={({ isActive }) => (isActive ? active : base)}>
             Home
           </NavLink>
 
@@ -76,7 +83,7 @@ export const Navbar = () => {
               w="200px"
               color="white"
               borderColor="#0f0617"
-              display={{ sm: "none" }}
+              // display={{ sm: "none" }}
               ml="-80px"
               mt="15px"
               boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
@@ -118,7 +125,7 @@ export const Navbar = () => {
         </Flex>
 
         <Spacer />
-        <InputGroup w={["200px", "250px", "250px"]} color="white">
+        <InputGroup w={["400px", "250px", "250px"]} color="white">
           <InputLeftElement
             pointerEvents="none"
             color="white"
@@ -129,14 +136,21 @@ export const Navbar = () => {
         </InputGroup>
 
         <Box color="white" borderRadius="50%">
-          <i class="fa-solid fa-user"></i>
+          <NavLink to="/login">
+            <i class="fa-solid fa-user"></i>
+          </NavLink>
         </Box>
-        <Box color="white">
+        <Box
+          color="white"
+          display={{ base: "none", sm: "none", md: "none", lg: "block" }}
+        >
           <ion-icon name="language-outline"></ion-icon>
         </Box>
         <Box
           color="white"
           w={{ sm: "none", md: "120px", lg: "130px" }}
+          // display={["none","block"]}
+          display={{ base: "none", sm: "none", md: "none", lg: "block" }}
           h="30px"
           borderRadius="5px"
           backgroundColor="#8230c6"
@@ -144,10 +158,15 @@ export const Navbar = () => {
           pt="2px"
           alignContent="center"
         >
-          PREMIMUM
+          <NavLink to="/plan">PREMIMUM</NavLink>
         </Box>
-        <Box color="white">
-          <Menu bgColor="#0f0617 " border="none">
+        <Box
+          color="white"
+          bgColor="#0f0617"
+          border="none"
+          //  w="15%"
+        >
+          <Menu bgColor="#0f0617" border="none">
             <MenuButton
               as={IconButton}
               bgColor="#0f0617"
@@ -158,7 +177,13 @@ export const Navbar = () => {
               border="none"
               color="white"
             />
-            <MenuList w="300px" bgColor="#0f0617 " h="40px" mb="80px">
+            <MenuList
+              w="300px"
+              bgColor="#0f0617 "
+              h="40px"
+              mb="60px"
+              border="none"
+            >
               <MenuItem h="40px" bgColor="#0f0617" color="white">
                 Home
               </MenuItem>

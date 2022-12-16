@@ -7,28 +7,35 @@ import {
 } from "react-icons/ai";
 export const Footer = () => {
   return (
-    <Box bgColor="#0f0617" color="white"  h={["900px","400px","400px"]} w="100%">
+    <Box 
+    bgColor="#0f0617"
+     color="white"
+    // color="black"
+    mt="200px"
+       h={["900px","400px","400px"]} 
+       w="100%">
            <Flex
         justifyContent="space-between"
         // paddingRight="30px"
        
-        gap="40px"
+        // gap="40px"
       >
-        <Box gap="40px"  mt="80px" mr="20px" ml="20px">
+        <Box gap="40px"  mt="80px"  ml="20px">
           <Flex gap="40px">
-            <Box>Dwonload apps</Box>
-            <Box>
+            <Box>Dwonload app</Box>
+            {/* <Box>
               <Image
                 borderRadius="5px"
                 src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg"
                 alt="apple"
               />
-            </Box>
+            </Box> */}
             <Box>
               <Image
                 borderRadius="5px"
                 src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg"
                 alt="google"
+                color="red"
               />
             </Box>
           </Flex>
