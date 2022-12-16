@@ -1,6 +1,8 @@
 import { Box, Grid, Heading, Image, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 import { Button } from "react-bootstrap";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 export const MultiCarousel = ({ data, head }) => {
   //  console.log(data);
@@ -10,6 +12,7 @@ export const MultiCarousel = ({ data, head }) => {
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
+    arrows: true,
     slidesToShow: 1,
     responsive: [
       {
@@ -25,6 +28,7 @@ export const MultiCarousel = ({ data, head }) => {
         settings: {
           slidesToShow: 2.2,
           slidesToScroll: 1,
+          arrows: true,
         },
       },
       {
@@ -33,7 +37,7 @@ export const MultiCarousel = ({ data, head }) => {
         settings: {
           slidesToShow: 2.2,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
         },
       },
       {
@@ -41,17 +45,20 @@ export const MultiCarousel = ({ data, head }) => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
         },
       },
     ],
   };
   return (
-    <Box mt="100px" w="90%" m="auto" gap="100px">
-      <Heading textAlign="left" mt="40px" mb="40px">
+    <>
+    <Box mt="100px"
+     w="90%"
+      m="auto" >
+      <Heading textAlign="left" mt="40px" mb="40px" color="white">
         {head}
       </Heading>
-      <Slider {...carousel} borderRadius="5px"  >
+      <Slider {...carousel} borderRadius="5px" >
         {data?.map((el) => (
           <Box
             textAlign="left"
@@ -60,45 +67,42 @@ export const MultiCarousel = ({ data, head }) => {
               cursor: "pointer",
               transform: "scale(1.12)",
               transitionDuration: "0.5s",
+          
             }}
           >
             <Box
               alignContent="center"
-              mr="20px"
-              borderRadius="25px"
+              mr="8px"
+              borderRadius="15px"
               border="2px solid grey"
-              h="300px"
+              h="280px"
+              bgColor="white"
+
+              color="black"
             >
               <Image
-                src={el.image}
+                src={el.img}
                 w="100%"
-                borderRadius="20px"
-                mt="4px"
-                h="250px"
+                borderRadius="12px"
+                h="200px"
               />
-              {/* </Box> */}
-              {/* <Box> */}
-              {/* <Box ml="20px">
-                <Text fontSize={19} fontWeight={"bold"}>
-                  {el.brand}
-                </Text>
-
-                <Text fontSize={16} fontWeight={"bold"}>
+              <Box ml="10px">
+                <Text fontSize={14} fontWeight={"bold"} >
                   {el.title}
                 </Text>
-
-                <Text fontSize={17}>₹ {el.price}</Text>
-
-                <Text fontSize={17}>{el.off}</Text>
-
-                <Button bgColor="#8230c6">
+                <Button bgColor="#8230c6" > 
                   <i bgColor="red" class="fa-solid fa-circle-play"></i> Watch
                 </Button>
-              </Box> */}
+              </Box>
             </Box>
+
+            <Box></Box>
           </Box>
         ))}
       </Slider>
     </Box>
+    </>
   );
 };
+
+
