@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
+import "./Navbar.css"
+
 import {
   Flex,
   Spacer,
@@ -142,9 +144,17 @@ export const Navbar = () => {
         </Box>
         <Box
           color="white"
-          display={{ base: "none", sm: "none", md: "none", lg: "block" }}
+          display={{ base: "none", sm: "none", md: "none", lg: "block",display:"block"}}
         >
+          
+          <Flex mt="30px"> 
+
+          <div id="google_translate_element">
+        
+          </div>
           <ion-icon name="language-outline"></ion-icon>
+          </Flex>
+
         </Box>
         <Box
           color="white"
