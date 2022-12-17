@@ -11,9 +11,9 @@ app.get("/serial", async (req, res) => {
   }
 });
 
-app.get("/marathi", async (req, res) => {
+app.get("/news", async (req, res) => {
   try {
-    const data = await TelevisionSchema.find({ category: "marathi" });
+    const data = await TelevisionSchema.find({ category: "news" });
     res.status(200).send(data);
   } catch (err) {
     res.status(500).send(e.message);
@@ -47,4 +47,41 @@ app.get("/popular", async (req, res) => {
   }
 });
 
+//Today's
+
+app.get("/kids", async (req, res) => {
+  try {
+    const data = await TelevisionSchema.find({ category: "kids" });
+    res.status(200).send(data);
+  } catch (err) {
+    res.status(500).send(e.message);
+  }
+});
+
+app.get("/live", async (req, res) => {
+  try {
+    const data = await TelevisionSchema.find({ category: "live tv" });
+    res.status(200).send(data);
+  } catch (err) {
+    res.status(500).send(e.message);
+  }
+});
+
+app.get("/music", async (req, res) => {
+  try {
+    const data = await TelevisionSchema.find({ category: "music" });
+    res.status(200).send(data);
+  } catch (err) {
+    res.status(500).send(e.message);
+  }
+});
+
+app.get("/premium", async (req, res) => {
+  try {
+    const data = await TelevisionSchema.find({ category: "premium" });
+    res.status(200).send(data);
+  } catch (err) {
+    res.status(500).send(e.message);
+  }
+});
 module.exports = app;

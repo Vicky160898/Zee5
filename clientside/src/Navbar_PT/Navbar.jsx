@@ -17,6 +17,7 @@ import {
   InputLeftElement,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
+import { Nav } from "react-bootstrap";
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const base = {
@@ -57,11 +58,11 @@ export const Navbar = () => {
             Home
           </NavLink>
 
-          <NavLink to="#" style={({ isActive }) => (isActive ? active : base)}>
+          <NavLink to="/serial" style={({ isActive }) => (isActive ? active : base)}>
             TV Shows
           </NavLink>
 
-          <NavLink to="#" style={({ isActive }) => (isActive ? active : base)}>
+          <NavLink to="/movies" style={({ isActive }) => (isActive ? active : base)}>
             Movies
           </NavLink>
         </Box>
@@ -89,18 +90,18 @@ export const Navbar = () => {
               boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
             >
               <Box ml="25px" color="white" fontWeight={"bold"}>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+               <NavLink to="/web-series"> <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"} >
                   Web Series
-                </MenuItem>
+                </MenuItem></NavLink>
+                <NavLink to="/news">
                 <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
                   News
                 </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Eduauraa
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                </NavLink>
+                <NavLink to="/song"><MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
                   Premimum
-                </MenuItem>
+                </MenuItem></NavLink>
+                
                 <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
                   News
                 </MenuItem>
@@ -125,7 +126,7 @@ export const Navbar = () => {
         </Flex>
 
         <Spacer />
-        <InputGroup w={["400px", "250px", "250px"]} color="white">
+        <InputGroup w={["400px", "250px", "250px"]} color="white"  display={["none","block"]}>
           <InputLeftElement
             pointerEvents="none"
             color="white"
@@ -150,7 +151,7 @@ export const Navbar = () => {
           color="white"
           w={{ sm: "none", md: "120px", lg: "130px" }}
           // display={["none","block"]}
-          display={{ base: "none", sm: "none", md: "none", lg: "block" }}
+          // display={{ base: "none", sm: "none", md: "none", lg: "block" }}
           h="30px"
           borderRadius="5px"
           backgroundColor="#8230c6"

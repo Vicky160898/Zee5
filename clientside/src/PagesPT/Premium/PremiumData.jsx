@@ -3,10 +3,10 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { MultiCarousel } from "./MultiCarousel";
-import { VideoCarousel } from "../Carousel/VideoCarousel";
+import { Premium } from "./Premium";
 
-export const Carousel_data = () => {
+
+export const PremiumData = () => {
   const [movie, setMovie] = useState([]);
   const getmovie = async () => {
     let res = await axios.get("http://localhost:8080/admin/movies");
@@ -61,7 +61,7 @@ export const Carousel_data = () => {
   };
   const [live, setLive] = useState([]);
   const getlive= async () => {
-    let res = await axios.get("http://localhost:8080/admin/live");
+    let res = await axios.get("http://localhost:8080/admin/music");
     let data = await res.data;
     setLive(data);
   };
@@ -79,16 +79,17 @@ export const Carousel_data = () => {
 
   return (
     <Box>
-      <VideoCarousel/>
-      <MultiCarousel data={web} head="Web-Series" />
-      <MultiCarousel data={serial} head="Serial" />
-      <MultiCarousel data={news} head="News" />
-      <MultiCarousel data={popular} head="Popular Movies" />
-      <MultiCarousel data={kids} head="Kids" />
-      <MultiCarousel data={premium} head="Premium" />
-      <MultiCarousel data={song} head="Songs" />
-      <MultiCarousel data={movie} head="Movies" />
-      <MultiCarousel data={live} head="Live" />
+      
+      <Premium data={premium} head="Premium" />
+      <Premium data={serial} head="Serial" />
+      <Premium data={news} head="News" />
+      <Premium data={popular} head="Popular Movies" />
+      <Premium data={kids} head="Kids" />
+      <Premium data={live} head="Live" />
+      <Premium data={web} head="Web-Series" />
+      <Premium data={song} head="Songs" />
+      <Premium data={movie} head="Movies" />
+      
       
     </Box>
   );

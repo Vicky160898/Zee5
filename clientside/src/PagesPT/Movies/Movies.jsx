@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-export const MultiCarousel = ({ data, head }) => {
+export const Movies = ({ data, head }) => {
   //  console.log(data);
   const carousel = {
     slidesToScroll: 1,
