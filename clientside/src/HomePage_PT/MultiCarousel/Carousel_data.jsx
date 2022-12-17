@@ -55,7 +55,7 @@ export const Carousel_data = () => {
   };
   const [song, setSong] = useState([]);
   const getsong = async () => {
-    let res = await axios.get("http://localhost:8080/admin/song");
+    let res = await axios.get("http://localhost:8080/admin/music");
     let data = await res.data;
     setSong(data);
   };

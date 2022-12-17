@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Movies } from "./Movies";
+import { MoviesCarousel } from "./MoviesCarousel";
 
 
 export const MoviesData = () => {
@@ -81,6 +82,7 @@ export const MoviesData = () => {
     <Box>
      
       
+      <MoviesCarousel/>
       <Movies data={movie} head="Movies" />
       <Movies data={web} head="Web-Series" /> 
       <Movies data={popular} head="Popular Movies" />

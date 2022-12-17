@@ -4,8 +4,9 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Serial } from "./Serial";
+import { SerialCarousel } from "./SerialCarousel";
 
-export const NewsData = () => {
+export const SerialData = () => {
   const [movie, setMovie] = useState([]);
   const getmovie = async () => {
     let res = await axios.get("http://localhost:8080/admin/movies");
@@ -78,7 +79,7 @@ export const NewsData = () => {
 
   return (
     <Box>
-     
+     <SerialCarousel/>
      <Serial data={serial} head="Serial" />
       <Serial data={movie} head="Movies" />
       <Serial data={web} head="Web-Series" /> 

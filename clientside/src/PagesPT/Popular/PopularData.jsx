@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Popular } from "./Popular";
+import { PopularCarousel } from "./PopularCarousel";
 
 export const PopularData = () => {
   const [movie, setMovie] = useState([]);
@@ -78,6 +79,7 @@ export const PopularData = () => {
 
   return (
     <Box>
+        <PopularCarousel/>
       <Popular data={popular} head="Popular Movies" />
       <Popular data={movie} head="Movies" />
       <Popular data={web} head="Web-Series" />

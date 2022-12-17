@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { News } from "./News";
+import { NewsCarousel } from "./NewsCarousel";
 
 export const NewsData = () => {
   const [movie, setMovie] = useState([]);
@@ -78,6 +79,7 @@ export const NewsData = () => {
 
   return (
     <Box>
+        <NewsCarousel/>
       <News data={news} head="News" />
       <News data={movie} head="Movies" />
       <News data={web} head="Web-Series" />

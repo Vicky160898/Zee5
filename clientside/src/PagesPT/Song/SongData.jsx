@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Song } from "./Song";
+import { SongCarousel } from "./SongCarousel";
 
 
 export const SongData = () => {
@@ -79,7 +80,7 @@ export const SongData = () => {
 
   return (
     <Box>
-   
+   <SongCarousel/>
       <Song data={song} head="Songs" />
       <Song data={movie} head="Movies" />
       <Song data={web} head="Web-Series" /> 

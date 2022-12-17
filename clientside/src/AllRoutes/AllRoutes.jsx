@@ -18,6 +18,7 @@ import { WebSeries } from "../PagesPT/WebSeries/WebSeries";
 import { WebSeriesData } from "../PagesPT/WebSeries/WebSeriesData";
 import { NewsData } from "../PagesPT/News/NewsData";
 import { PopularData } from "../PagesPT/Popular/PopularData";
+import { SerialData } from "../PagesPT/Serial/SerialData";
 export const AllRoutes = () => {
   return (
     <Box>
@@ -28,7 +29,7 @@ export const AllRoutes = () => {
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/plan" element={<Party/>}/>
         <Route path="/:id" element={<VideoPlay/>}/>
-        <Route path="/serial" element={<TVShowsData/>}/>
+        <Route path="/serial" element={<SerialData/>}/>
         <Route path="/live" element={<LiveTVData/>}/>
         <Route path="/kids" element={<KidsData/>}/>
         <Route path="/song" element={<SongData/>}/>
@@ -37,6 +38,7 @@ export const AllRoutes = () => {
         <Route path="/popular" element={<PopularData/>}/>
         <Route path="/news" element={<NewsData/>}/>
         <Route path="/web-series" element={<WebSeriesData/>}/>
+        <Route path="/serial" element={<TVShowsData/>}/>
       </Routes>
     </Box>
   );

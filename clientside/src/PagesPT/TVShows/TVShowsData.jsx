@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { MultiCarousel } from "../../HomePage_PT/MultiCarousel/MultiCarousel";
 import { TVShows } from "./TVShows";
+import { TVShowsCarousel } from "./TVShowsCarousel";
 
 
 export const TVShowsData = () => {
@@ -80,7 +81,7 @@ export const TVShowsData = () => {
 
   return (
     <Box>
-      
+      <TVShowsCarousel/>
       <TVShows data={serial} head="Serial" />
       <TVShows data={song} head="Songs" />
       <TVShows data={movie} head="Movies" />

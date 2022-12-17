@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { LiveTV } from "./LiveTV";
+import { LiveTVCarousel } from "./LiveTVCarousel";
 
 
 export const LiveTVData = () => {
@@ -61,10 +62,11 @@ export const LiveTVData = () => {
   };
   const [live, setLive] = useState([]);
   const getlive= async () => {
-    let res = await axios.get("http://localhost:8080/admin/music");
+    let res = await axios.get("http://localhost:8080/admin/live");
     let data = await res.data;
     setLive(data);
   };
+
   useEffect(() => {
     getmovie();
     getweb();
@@ -79,7 +81,7 @@ export const LiveTVData = () => {
 
   return (
     <Box>
-     
+     <LiveTVCarousel/>
       <LiveTV data={live} head="Live" />
       <LiveTV data={web} head="Web-Series" />
       <LiveTV data={serial} head="Serial" />

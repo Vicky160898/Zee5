@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Premium } from "./Premium";
+import { PremiumCarousel } from "./PremiumCarousel";
 
 
 export const PremiumData = () => {
@@ -79,7 +80,7 @@ export const PremiumData = () => {
 
   return (
     <Box>
-      
+      <PremiumCarousel/>
       <Premium data={premium} head="Premium" />
       <Premium data={serial} head="Serial" />
       <Premium data={news} head="News" />

@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Kids } from "./Kids";
+import { KidsCarousel } from "./KidsCarousel";
 export const KidsData = () => {
   const [movie, setMovie] = useState([]);
   const getmovie = async () => {
@@ -77,7 +78,7 @@ export const KidsData = () => {
 
   return (
     <Box>
-      
+      <KidsCarousel/>
       <Kids data={kids} head="Kids" />
       <Kids data={premium} head="Premium" />
       <Kids data={song} head="Songs" />
