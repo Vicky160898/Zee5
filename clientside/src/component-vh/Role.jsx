@@ -42,7 +42,7 @@ export const Role = () => {
         </FormControl>
         <FormLabel>Role</FormLabel>
         <Select placeholder="Select Role"   bg={useColorModeValue("#2C2136")}>
-          <option value="option1"  color="#2C2136">Admin</option>
+          <option value="option1"  color="#2C2136">Service Provider</option>
           <option value="option2"  color="#2C2136">User</option>
         </Select>
         <Stack spacing={6}>

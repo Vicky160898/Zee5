@@ -27,9 +27,10 @@ export const Data = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(state);
+    //console.log(state);
     let res = await axios.post("http://localhost:8080/admin/add", state);
     console.log(res);
+    setState(user);
   };
 
   const handleChange = async (e) => {
