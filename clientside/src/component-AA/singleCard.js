@@ -5,7 +5,7 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 function SingleCard(props) {
-  console.log(props)
+ // console.log(props)
   const [state, setState] = useState(false);
 
   return (
@@ -22,9 +22,9 @@ function SingleCard(props) {
       onMouseLeave={() => setState(false)}
       className="hover:z-10 mt-10 first-letter:overflow-hidden my-4 hover:scale-105 duration-150"
     >
-      <Link to={`/video/play/Ninaithake Inikum`}>
-        <Box className="mx-5 hover:scale-105 hover:z-20">
-          <Image src={`https://image.tmdb.org/t/p/original/${props.data.poster_path}`} alt="title" borderRadius="lg" h='300px' w="100%" />
+      <Link to={`/${props.data.category}/${props.data._id}`}>
+        <Box >
+          <Image src={`${props.data.img}`} alt="title" borderRadius="lg" h='350px' w="93%"  m="auto"  />
           
          
         </Box>
@@ -65,7 +65,7 @@ function SingleCard(props) {
           >
             <VStack py={0} align={"left"} w={"100%"} bg={"whitesmoke"} color={"gray"} wrap={"wrap"} fontSize={"sm"}>
               <Text ml={1} color={"gray"} fontSize={"sm"} fontWeight="600">
-                ● Ninaithake Inikum
+                ● {props.data.title}
               </Text>
               <Flex alignItems={"center"} gap={2}>
                 <Button size="xs" colorScheme="black" variant="outline" ml={2}>
