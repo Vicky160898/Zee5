@@ -1,0 +1,22 @@
+.goog-te-gadget-icon{
+    background:none !important;
+    }
+    .goog-te-gadget-icon{
+        display:none;
+      }
+      
+      .goog-te-menu-value span:nth-child(3), 
+.goog-te-menu-value span:nth-child(5), 
+.goog-te-gadget-icon, 
+.goog-te-banner-frame.skiptranslate {
+    display:none !important;
+  }
+
+div#google_translate_element div.goog-te-gadget-simple {
+    border: none;
+    background-color: transparent;
+}
+.goog-te-gadget-simple .goog-te-menu-value span {
+    text-decoration: none;
+    display: none;
+}
