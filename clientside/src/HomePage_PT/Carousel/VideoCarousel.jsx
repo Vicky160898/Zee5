@@ -1,61 +1,54 @@
+import { Box, Image } from "@chakra-ui/react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 import React from "react";
-import "./VideoCarousel.css";
-import { Carousel } from "react-bootstrap";
-import ReactPlayer from "react-player";
-import "bootstrap/dist/css/bootstrap.css";
-import { Box, Text } from "@chakra-ui/react";
+
 export const VideoCarousel = () => {
-  const videoSetting = [
+  const carousel = {
+    speed: 1000,
+    slidesToshow: 1.3,
+    slidesToScroll: 1.3,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
+  };
+ 
+  const items = [
     {
-      id: 1,
-      title: "Kumkum Bhagya",
-      src: "https://www.youtube.com/watch?v=joZRFygCD5w",
-      credit: "Zee TV",
+      url: "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-0-1z5250012/cover/1170x658withlogod884c823e4ad4a6293cb4a99316a8cfb.jpg",
     },
     {
-      id: 2,
-      title: "Kundali Bhagya",
-      src: "https://www.youtube.com/watch?v=LP26qiLkZ_Y",
-      credit: "Zee TV",
+      url: "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-3392/cover/1170x658withlogo15276a9c997d48958e486bdda9eecc4e_free.jpg",
     },
     {
-      id: 3,
-      title: "Radha Mohan",
-      src: "https://www.youtube.com/watch?v=emP7ArfCcF8",
-      credit: "Zee TV",
+      url: "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-6-4z5199975/cover/1170x658withlogoeacb29c71a9248d486d2d5132d77922c.jpg",
     },
     {
-      id: 4,
-      title: "Kundali Bhagya",
-      src: "https://www.youtube.com/watch?v=QAvzUoOJmK0",
-      credit: "Zee TV",
-    },
-    {
-      id: 5,
-      title: "Bhagya Lakshmi",
-      src: "https://www.youtube.com/watch?v=jl0SRPOqlHA",
-      credit: "Zee TV",
+      url: "https://akamaividz2.zee5.com/image/upload/w_1013,h_405,c_scale,f_webp,q_auto:eco/resources/0-8-8703/cover/moviescompo1440x8100fe1eeaef4c541788aee59d2bab7b1f4.jpg",
     },
   ];
+
+
+
+
+
   return (
-    <Box  marginTop={{base:"18%",md:"9%",lg:"6%"}}>
-      <Carousel>
-        {videoSetting.map((item) => (
-          <Carousel.Item key={item.id}>
-            <ReactPlayer
-              url={item.src}
-              width={{md:"80%",md:"100%",lg:"100%"}}
-              pip={true}
-              controls={true}
-              playing={true}
-            />
-            <Carousel.Caption>
-              <Text>{item.title}</Text>
-              <Text>{item.credit}</Text>
-            </Carousel.Caption>
-          </Carousel.Item>
+    <Box margin="auto" justifyContent="center" 
+    // border="10px solid yellow"
+    mt={{base:"85px",sm:"85px",md:"85px",lg:"80px"}}
+    w={{base:"80%",sm:"60%",md:"80%",lg:"95%"}}
+    // w={["100%","70%","95%"]}
+    >
+      <Slider {...carousel} borderRadius="5px" >
+        {items.map((el) => (
+          <Box>
+            <Image src={el.url} 
+            w={{sm:"60%",md:"80%",lg:"95%"}}
+             margin="auto" />
+          </Box>
         ))}
-      </Carousel>
+      </Slider>
     </Box>
   );
 };

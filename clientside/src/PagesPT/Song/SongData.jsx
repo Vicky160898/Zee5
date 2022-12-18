@@ -3,15 +3,15 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { MultiCarousel } from "./MultiCarousel";
-import { VideoCarousel } from "../Carousel/VideoCarousel";
+import { Song } from "./Song";
+import { SongCarousel } from "./SongCarousel";
 
-export const Carousel_data = () => {
+
+export const SongData = () => {
   const [movie, setMovie] = useState([]);
   const getmovie = async () => {
     let res = await axios.get("http://localhost:8080/admin/movies");
     let data = await res.data;
-    console.log(data)
     setMovie(data);
   };
 
@@ -37,7 +37,7 @@ export const Carousel_data = () => {
 
   const [popular, setPopular] = useState([]);
   const getpopular = async () => {
-    let res = await axios.get("http://localhost:8080/admin/Popular-Movies");
+    let res = await axios.get("http://localhost:8080/admin/popular");
     let data = await res.data;
     setPopular(data);
   };
@@ -80,21 +80,16 @@ export const Carousel_data = () => {
 
   return (
     <Box>
-      <VideoCarousel/>
-      <MultiCarousel data={web} head="Web-Series" />
-      <MultiCarousel data={serial} head="Serial" />
-      <MultiCarousel data={news} head="News" />
-
-      <MultiCarousel data={popular} head="Popular Movies" />
-      <MultiCarousel data={kids} head="Kids" />
-      <MultiCarousel data={premium} head="Premium" />
-      <MultiCarousel data={song} head="Songs" />
-      <MultiCarousel data={movie} head="Movies" />
-      <MultiCarousel data={live} head="Live" />
-      
-
-      <MultiCarousel data={popular} head="Popular-Movies" />
-
+   <SongCarousel/>
+      <Song data={song} head="Songs" />
+      <Song data={movie} head="Movies" />
+      <Song data={web} head="Web-Series" /> 
+      <Song data={popular} head="Popular Movies" />
+      <Song data={premium} head="Premium" />
+      <Song data={serial} head="Serial" />
+      <Song data={live} head="Live" />
+      <Song data={news} head="News" />
+      <Song data={kids} head="Kids" />
     </Box>
   );
 };
