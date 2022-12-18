@@ -4,36 +4,35 @@ import { Link, Navigate } from "react-router-dom"
 import {AiFillApple,AiFillFacebook,AiOutlineTwitter} from "react-icons/ai"
 import {FcGoogle} from "react-icons/fc"
 import "./LoginV.css"
-// import { useState } from "react"
-// import {useSelector,useDispatch} from "react-redux"
+import { useState } from "react"
+import {useSelector,useDispatch} from "react-redux"
 
 import axios from "axios"
-// import { authSignInSucess } from "../../Redux/auth/auth.action"
+import { authSignInSucess } from "../../ComponentsPs/Redux/auth/auth.action"
 
 function Login(){
-// const [user,setUser]=useState({email:"",password:""})
+const [user,setUser]=useState({email:"",password:""})
 
-// const dispatch = useDispatch();
-// const state = useSelector(state=>state);
-// if(state?.auth?.data?.isAuth){
-//     // console.log("if condition",state)
-//     return <Navigate to="/" />
-// }
+const dispatch = useDispatch();
+const state = useSelector(state=>state);
+if(state?.auth?.data?.isAuth){
+    // console.log("if condition",state)
+    return <Navigate to="/" />
+}
 const handleChange=(e)=>{
-    // const {name,value}=e.target
+    const {name,value}=e.target
 
-    // setUser({...user,[name]:value})
+    setUser({...user,[name]:value})
 }
 
 const handleSubmit=(e)=>{
-    // e.preventDefault();
-    // console.log({...user})
-    // dispatch(authSignInSucess({...user}))
-// axios.post("https://vidfy.up.railway.app/movies",{email:user.email,password:user.password}).then((response)=>{console.log(response.data)}).catch((e)=>{console.log(e)})
+    e.preventDefault();
+    console.log({...user})
+    dispatch(authSignInSucess(user))
 
 }
 return(
-    <Box  >
+    <Box  color="white">
         <Stack>
         <Box className="LoginMainBox" >
             <Box className="LoginInnerBox">
