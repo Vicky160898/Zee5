@@ -3,15 +3,14 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { MultiCarousel } from "./MultiCarousel";
-import { VideoCarousel } from "../Carousel/VideoCarousel";
+import { Popular } from "./Popular";
+import { PopularCarousel } from "./PopularCarousel";
 
-export const Carousel_data = () => {
+export const PopularData = () => {
   const [movie, setMovie] = useState([]);
   const getmovie = async () => {
     let res = await axios.get("http://localhost:8080/admin/movies");
     let data = await res.data;
-    console.log(data)
     setMovie(data);
   };
 
@@ -37,7 +36,7 @@ export const Carousel_data = () => {
 
   const [popular, setPopular] = useState([]);
   const getpopular = async () => {
-    let res = await axios.get("http://localhost:8080/admin/Popular-Movies");
+    let res = await axios.get("http://localhost:8080/admin/popular");
     let data = await res.data;
     setPopular(data);
   };
@@ -61,7 +60,7 @@ export const Carousel_data = () => {
     setSong(data);
   };
   const [live, setLive] = useState([]);
-  const getlive= async () => {
+  const getlive = async () => {
     let res = await axios.get("http://localhost:8080/admin/live");
     let data = await res.data;
     setLive(data);
@@ -80,21 +79,16 @@ export const Carousel_data = () => {
 
   return (
     <Box>
-      <VideoCarousel/>
-      <MultiCarousel data={web} head="Web-Series" />
-      <MultiCarousel data={serial} head="Serial" />
-      <MultiCarousel data={news} head="News" />
-
-      <MultiCarousel data={popular} head="Popular Movies" />
-      <MultiCarousel data={kids} head="Kids" />
-      <MultiCarousel data={premium} head="Premium" />
-      <MultiCarousel data={song} head="Songs" />
-      <MultiCarousel data={movie} head="Movies" />
-      <MultiCarousel data={live} head="Live" />
-      
-
-      <MultiCarousel data={popular} head="Popular-Movies" />
-
+        <PopularCarousel/>
+      <Popular data={popular} head="Popular Movies" />
+      <Popular data={movie} head="Movies" />
+      <Popular data={web} head="Web-Series" />
+      <Popular data={song} head="Songs" />
+      <Popular data={premium} head="Premium" />
+      <Popular data={serial} head="Serial" />
+      <Popular data={live} head="Live" />
+      <Popular data={news} head="News" />
+      <Popular data={kids} head="Kids" />
     </Box>
   );
 };

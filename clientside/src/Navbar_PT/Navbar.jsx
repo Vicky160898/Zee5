@@ -19,6 +19,7 @@ import {
   InputLeftElement,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
+import { Nav } from "react-bootstrap";
 export const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const base = {
@@ -38,18 +39,18 @@ export const Navbar = () => {
         gap="20px"
         bgColor="#0f0617"
       >
-       <NavLink to="/">
-       <Image
-          ml="10px"
-          h="70px"
-          w="70px"
-          mt="10px"
-          mb="10px"
-          borderRadius="20px"
-          src={logo}
-          alt=""
-        />
-       </NavLink>
+        <NavLink to="/">
+          <Image
+            ml="10px"
+            h="70px"
+            w="70px"
+            mt="10px"
+            mb="10px"
+            borderRadius="20px"
+            src={logo}
+            alt=""
+          />
+        </NavLink>
         <Box
           color="white"
           gap="20px"
@@ -59,11 +60,17 @@ export const Navbar = () => {
             Home
           </NavLink>
 
-          <NavLink to="#" style={({ isActive }) => (isActive ? active : base)}>
+          <NavLink
+            to="/serial"
+            style={({ isActive }) => (isActive ? active : base)}
+          >
             TV Shows
           </NavLink>
 
-          <NavLink to="#" style={({ isActive }) => (isActive ? active : base)}>
+          <NavLink
+            to="/movies"
+            style={({ isActive }) => (isActive ? active : base)}
+          >
             Movies
           </NavLink>
         </Box>
@@ -91,43 +98,60 @@ export const Navbar = () => {
               boxShadow="rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px"
             >
               <Box ml="25px" color="white" fontWeight={"bold"}>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Web Series
+                <NavLink to="/web-series">
+                  {" "}
+                  <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                    Web Series
+                  </MenuItem>
+                </NavLink>
+                <NavLink to="/news">
+                  <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                    News
+                  </MenuItem>
+                </NavLink>
+                <NavLink to="/premium">
+                  <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                    Premimum
+                  </MenuItem>
+                </NavLink>
+
+                <NavLink to="/live">
+                  <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                    Live TV
+                  </MenuItem>
+                </NavLink>
+                <NavLink to="/song">
+                  <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                    Music
+                  </MenuItem>
+                </NavLink>
+                <NavLink to="/kids">
+                  <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                    Kids
+                  </MenuItem>
+                </NavLink>
+                <NavLink to="/popular">
+                {" "}
+                <MenuItem bgColor="#0f0617 " h="40px" fontWeight={"bold"}>
+                  Popular
                 </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  News
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Eduauraa
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Premimum
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  News
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Live TV
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Music
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Rent
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Kids
-                </MenuItem>
-                <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
-                  Videos
-                </MenuItem>
+              </NavLink>
+                <NavLink to="/song">
+                  <MenuItem bgColor="#0f0617" h="40px" fontWeight={"bold"}>
+                    Videos
+                  </MenuItem>
+                </NavLink>
               </Box>
             </MenuList>
           </Menu>
         </Flex>
 
         <Spacer />
-        <InputGroup w={["400px", "250px", "250px"]} color="white">
+        <InputGroup
+          w={["400px", "250px", "250px"]}
+          color="white"
+          display={["none", "block"]}
+        >
           <InputLeftElement
             pointerEvents="none"
             color="white"
@@ -160,7 +184,7 @@ export const Navbar = () => {
           color="white"
           w={{ sm: "none", md: "120px", lg: "130px" }}
           // display={["none","block"]}
-          display={{ base: "none", sm: "none", md: "none", lg: "block" }}
+          // display={{ base: "none", sm: "none", md: "none", lg: "block" }}
           h="30px"
           borderRadius="5px"
           backgroundColor="#8230c6"
@@ -194,43 +218,68 @@ export const Navbar = () => {
               mb="60px"
               border="none"
             >
-              <MenuItem h="40px" bgColor="#0f0617" color="white">
-                Home
-              </MenuItem>
+              <NavLink to="/">
+                {" "}
+                <MenuItem h="40px" bgColor="#0f0617" color="white">
+                  Home
+                </MenuItem>
+              </NavLink>
 
-              <MenuItem bgColor="#0f0617 " h="40px">
-                TV Shows
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Movies
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Web Series
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                News
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Eduauraa
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Premium
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Live TV
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Music
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Rent
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Kids
-              </MenuItem>
-              <MenuItem bgColor="#0f0617 " h="40px">
-                Videos
-              </MenuItem>
+              <NavLink to="/serial">
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  TV Shows
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/movies">
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Movies
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/web-series">
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Web Series
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/news">
+                {" "}
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  News
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/popular">
+                {" "}
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Popular
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/premium">
+                {" "}
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Premium
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/live">
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Live TV
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/song">
+                {" "}
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Music
+                </MenuItem>
+              </NavLink>
+
+              <NavLink to="/kids">
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Kids
+                </MenuItem>
+              </NavLink>
+              <NavLink to="/song">
+                <MenuItem bgColor="#0f0617 " h="40px">
+                  Videos
+                </MenuItem>
+              </NavLink>
             </MenuList>
           </Menu>
         </Box>
