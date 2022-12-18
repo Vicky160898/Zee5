@@ -3,15 +3,13 @@ import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { MultiCarousel } from "./MultiCarousel";
-import { VideoCarousel } from "../Carousel/VideoCarousel";
-
-export const Carousel_data = () => {
+import { Kids } from "./Kids";
+import { KidsCarousel } from "./KidsCarousel";
+export const KidsData = () => {
   const [movie, setMovie] = useState([]);
   const getmovie = async () => {
     let res = await axios.get("http://localhost:8080/admin/movies");
     let data = await res.data;
-    console.log(data)
     setMovie(data);
   };
 
@@ -37,7 +35,7 @@ export const Carousel_data = () => {
 
   const [popular, setPopular] = useState([]);
   const getpopular = async () => {
-    let res = await axios.get("http://localhost:8080/admin/Popular-Movies");
+    let res = await axios.get("http://localhost:8080/admin/popular");
     let data = await res.data;
     setPopular(data);
   };
@@ -56,13 +54,13 @@ export const Carousel_data = () => {
   };
   const [song, setSong] = useState([]);
   const getsong = async () => {
-    let res = await axios.get("http://localhost:8080/admin/music");
+    let res = await axios.get("http://localhost:8080/admin/song");
     let data = await res.data;
     setSong(data);
   };
   const [live, setLive] = useState([]);
   const getlive= async () => {
-    let res = await axios.get("http://localhost:8080/admin/live");
+    let res = await axios.get("http://localhost:8080/admin/music");
     let data = await res.data;
     setLive(data);
   };
@@ -80,21 +78,16 @@ export const Carousel_data = () => {
 
   return (
     <Box>
-      <VideoCarousel/>
-      <MultiCarousel data={web} head="Web-Series" />
-      <MultiCarousel data={serial} head="Serial" />
-      <MultiCarousel data={news} head="News" />
-
-      <MultiCarousel data={popular} head="Popular Movies" />
-      <MultiCarousel data={kids} head="Kids" />
-      <MultiCarousel data={premium} head="Premium" />
-      <MultiCarousel data={song} head="Songs" />
-      <MultiCarousel data={movie} head="Movies" />
-      <MultiCarousel data={live} head="Live" />
-      
-
-      <MultiCarousel data={popular} head="Popular-Movies" />
-
+      <KidsCarousel/>
+      <Kids data={kids} head="Kids" />
+      <Kids data={premium} head="Premium" />
+      <Kids data={song} head="Songs" />
+      <Kids data={movie} head="Movies" />
+      <Kids data={live} head="Live" />
+      <Kids data={web} head="Web-Series" />
+      <Kids data={serial} head="Serial" />
+      <Kids data={news} head="News" />
+      <Kids data={popular} head="Popular Movies" />
     </Box>
   );
 };
