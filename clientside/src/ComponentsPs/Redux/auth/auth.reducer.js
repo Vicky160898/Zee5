@@ -1,6 +1,5 @@
 
 import axios from 'axios';
-import { BUY_SUBSCRIPTION } from './payment/payment.type';
 
 import { AUTH_SIGN_IN_ERROR, AUTH_SIGN_IN_LOADING, AUTH_SIGN_IN_SUCCESS, AUTH_SIGN_OUT, AUTH_SIGN_UP_ERROR, AUTH_SIGN_UP_LOADING, AUTH_SIGN_UP_SUCCESS } from './auth.type';
 const getData = (key)=>{
@@ -82,13 +81,7 @@ export const authReducer = (state = init, { type, payload }) => {
             }
         }
 
-        case BUY_SUBSCRIPTION :{
-            axios.patch(`https://vidfy.up.railway.app/users/payment`,payload)
-            return{
-                ...state,
-                data:{...state.data,isPremium:true}
-            }
-        }
+       
         default: return state
     }
 }
