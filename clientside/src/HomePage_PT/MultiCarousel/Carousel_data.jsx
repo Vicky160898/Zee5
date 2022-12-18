@@ -11,6 +11,7 @@ export const Carousel_data = () => {
   const getmovie = async () => {
     let res = await axios.get("http://localhost:8080/admin/movies");
     let data = await res.data;
+    console.log(data)
     setMovie(data);
   };
 
@@ -36,7 +37,7 @@ export const Carousel_data = () => {
 
   const [popular, setPopular] = useState([]);
   const getpopular = async () => {
-    let res = await axios.get("http://localhost:8080/admin/popular");
+    let res = await axios.get("http://localhost:8080/admin/Popular-Movies");
     let data = await res.data;
     setPopular(data);
   };
@@ -83,6 +84,7 @@ export const Carousel_data = () => {
       <MultiCarousel data={web} head="Web-Series" />
       <MultiCarousel data={serial} head="Serial" />
       <MultiCarousel data={news} head="News" />
+
       <MultiCarousel data={popular} head="Popular Movies" />
       <MultiCarousel data={kids} head="Kids" />
       <MultiCarousel data={premium} head="Premium" />
@@ -90,6 +92,9 @@ export const Carousel_data = () => {
       <MultiCarousel data={movie} head="Movies" />
       <MultiCarousel data={live} head="Live" />
       
+
+      <MultiCarousel data={popular} head="Popular-Movies" />
+
     </Box>
   );
 };

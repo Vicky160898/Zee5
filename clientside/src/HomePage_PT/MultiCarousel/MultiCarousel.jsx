@@ -4,8 +4,10 @@ import { Button } from "react-bootstrap";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import {useNavigate} from 'react-router-dom'
 export const MultiCarousel = ({ data, head }) => {
-  //  console.log(data);
+   console.log("chedck",data,head);
+  const navigate=useNavigate()
   const carousel = {
     slidesToScroll: 1,
     dots: false,
@@ -67,6 +69,7 @@ export const MultiCarousel = ({ data, head }) => {
                 transitionDuration: "0.5s",
               }}
             >
+
               <Box
                 alignContent="center"
                 mr="8px"
@@ -85,6 +88,20 @@ export const MultiCarousel = ({ data, head }) => {
                     <i bgColor="red" class="fa-solid fa-circle-play"></i> Watch
                   </Button>
                 </Box>
+              <Image
+                src={el.img}
+                w="100%"
+                borderRadius="12px"
+                h="200px"
+              />
+              <Box ml="10px">
+                <Text fontSize={14} fontWeight={"bold"} >
+                  {el.title}
+                </Text>
+                <Button bgColor="#8230c6" onClick={()=>navigate(`/${head}/${el._id}`)} > 
+                  <i bgColor="red" class="fa-solid fa-circle-play"></i> Watch
+                </Button>
+
               </Box>
 
               <Box></Box>

@@ -11,8 +11,13 @@ import {
   TableContainer,
   Text,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 export const Premium = () => {
+  const [ user , setUser ] = useState([]);
+
+
+  
   return (
     <>
       <Box marginTop={50} bg="#0F0617" padding="50px">

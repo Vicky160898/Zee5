@@ -28,6 +28,7 @@ export const AllRoutes = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/signup" element={<Signup/>}/>
         <Route path="/plan" element={<Party/>}/>
+
         <Route path="/:id" element={<VideoPlay/>}/>
         <Route path="/serial" element={<SerialData/>}/>
         <Route path="/live" element={<LiveTVData/>}/>
@@ -39,6 +40,15 @@ export const AllRoutes = () => {
         <Route path="/news" element={<NewsData/>}/>
         <Route path="/web-series" element={<WebSeriesData/>}/>
         <Route path="/serial" element={<TVShowsData/>}/>
+
+        <Route path="/:head/:id" element={<VideoPlay/>}/>
+        {/* <Route path="" element={}/> */}
+        {/* <Route path="" element={}/> */}
+        {/* <Route path="" element={}/> */}
+        {/* <Route path="" element={}/> */}
+        {/* <Route path="" element={}/> */}
+        {/* <Route path="" element={}/> */}
+
       </Routes>
     </Box>
   );
