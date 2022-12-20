@@ -1,10 +1,5 @@
 <h1>Home page</h1>
 
-![Screenshot (111)](https://user-images.githubusercontent.com/97114184/208631467-a000480d-9db5-43a9-ab46-3dcda6f4d624.png)
-![Screenshot (112)](https://user-images.githubusercontent.com/97114184/208631481-8740e4b4-4026-4803-9aae-3c93ff86608a.png)
-![Screenshot (113)](https://user-images.githubusercontent.com/97114184/208631487-ae1ef899-0599-4bfc-9ac6-60ef5e668ac2.png)
-![Screenshot (114)](https://user-images.githubusercontent.com/97114184/208631488-7fbef335-687e-4ce6-9b80-aaff95c9cf21.png)
-![Screenshot (115)](https://user-images.githubusercontent.com/97114184/208631499-52c151bd-b53a-4190-a994-4e1c5f67913d.png)
 ![Screenshot (151)](https://user-images.githubusercontent.com/97114184/208631509-23f573a5-9359-49ff-bb25-2e30d31db47a.png)
 ![Screenshot (152)](https://user-images.githubusercontent.com/97114184/208631511-1d1eddda-61f4-491c-a9aa-cd019253fa59.png)
 ![Screenshot (153)](https://user-images.githubusercontent.com/97114184/208631520-03b4515f-d8d2-43f1-be1d-77ae4cc889da.png)
