@@ -21,7 +21,8 @@
 
 ![Screenshot (159)](https://user-images.githubusercontent.com/97114184/208631568-79793916-033b-454a-9417-86c7ebc5739e.png)
  
- <h1>Video Play Route</h1>
+ <h1>Video Playing Route</h1>
+ 
 ![Screenshot (173)](https://user-images.githubusercontent.com/97114184/208640584-b400a9ce-c6b3-40eb-ac14-9492c48547f1.png)
 
 ![Screenshot (174)](https://user-images.githubusercontent.com/97114184/208640602-7cdc5e9b-638a-495b-845c-85ab3a41b333.png)
