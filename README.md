@@ -49,15 +49,14 @@
 ![Screenshot (172)](https://user-images.githubusercontent.com/97114184/208631625-24230813-8829-43ed-b2b6-d55c87818c9f.png)
 
 
-# lucky-brass-2188
 
 <h2>Tech Stach</h2>
- <p>Reactjs</p>
- <p>Nodejs</p>
- <p>Mongoose</p>
- <p>Mongodb</p>
- <p>Charka-UI</p>
- <p>zwt</p>
+ <p>1-Reactjs</p>
+ <p>2-Nodejs</p>
+ <p>3-Mongoose</p>
+ <p>4-Mongodb</p>
+ <p>5-Charka-UI</p>
+ <p>6-zwt</p>
 
 Team Manager : Srikanth Chiramana
 
@@ -67,3 +66,9 @@ Team Manager : Srikanth Chiramana
 3. Pradyuman Suresh Shukla - fw17_0106
 4. Neha Singh - fw18_0910
 5. Aayan Ahmad - fw19_0824
+
+# lucky-brass-2188(ZEE5 CLONE) 
+
+  Github Link-https://github.com/Vicky160898/lucky-brass-2188
+  
+  Deployment Link -https://funtv.vercel.app/
