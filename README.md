@@ -13,7 +13,8 @@
 ![Screenshot (158)](https://user-images.githubusercontent.com/97114184/208631562-78cbce84-e4d0-42ae-aabc-972d198ae9bd.png)
 ![Screenshot (159)](https://user-images.githubusercontent.com/97114184/208631568-79793916-033b-454a-9417-86c7ebc5739e.png)
 
-<h1>Primium page</h1>
+<h1>Primium authentication </h1>
+
 ![Screenshot (160)](https://user-images.githubusercontent.com/97114184/208631570-982f036c-fed3-4efa-bb25-2dd25a03e3d6.png)
 ![Screenshot (161)](https://user-images.githubusercontent.com/97114184/208631573-28b8c5fe-40cf-47e8-96be-5174f7debdda.png)
 ![Screenshot (162)](https://user-images.githubusercontent.com/97114184/208631575-fdaa56ce-7af2-4325-a434-fde0238bb302.png)
