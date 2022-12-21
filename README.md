@@ -1,5 +1,11 @@
+Decription- it was a group project in witch total 5 member involved and duration of project was 5 day.We have build a #ZEE5 CLONE in witch we have implemented dynamic home home, tvshow,movies,kids,news,webshow,serial,video open route,navbar,footer,search,language,login/signup,primium and admin page.
+
+About #ZEE5 -: At Zee5, the online video streaming Over The Top (OTT) platform, we truly believe that for entertainment to come alive, you need to feel it. That’s where Zee5 brings in the advantage of the language of your comfort! With 12 navigational and featured languages across original features, live TV, catch up TV, lifestyle shows, children's programmes, exclusive short series and acclaimed plays.We offer a comfortable and friendly user experience with highly evolved video streaming technology at amazing speed and crystal clear sounds. Language Navigation, Seamless Video playback, Smart Content Search & recommendation, option to choose video quality and much more create a video experience like no other
+
+
 
 <h1>Home page</h1>
+
 
 ![Screenshot (151)](https://user-images.githubusercontent.com/97114184/208631509-23f573a5-9359-49ff-bb25-2e30d31db47a.png)
 
